@@ -6,7 +6,7 @@ sudo apt install mininet
 sudo apt install wireshark
 ```
 ## Experimento
-Para realisar o experimento devemos segui o segunte passo a passo no terminal
+Para realisar o experimento devemos segui o seguinte passo a passo no terminal
 ```
 sudo mn --topo single,4 #Para fazer uma topologia de 4 hosts e 1 switch:
 
@@ -17,7 +17,7 @@ wireshark & #para abrir o programa
 ```
 no wireshark  
 ![alt text](image.png)  
-no menu superior consiguira gravar e salva os dados para o experimento(salvar como .PCAP).
+no menu superior consiguira gravar e salva os dados para o experimento(salvar como .PCAP).  
 ![alt text](image-1.png)  
 no terminal principal
 ```
@@ -28,7 +28,7 @@ com isso no wireshark poderemos observar ele capturando os dados
 ![alt text](image-2.png)
 
 agora com o arquivo PCAP salvo na mesma pasta do codigo desse repositório com o nome de `valido.pcap`
-ao rodar o codigo teremos uma saida parecida com essa:
+ao rodar o codigo teremos uma saida parecida com essa:  
 ![alt text](image-3.png)  
 ![alt text](image-4.png)
 
