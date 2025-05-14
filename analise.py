@@ -1,39 +1,3 @@
-# Analisando o tráfego de rede no Wireshark e no Mininet
-## Preparação
-Para realizar esse esperimento temos que intalar o `mininet` e o `wireshark`:
-```
-sudo apt install mininet
-sudo apt install wireshark
-```
-## Experimento
-Para realisar o experimento devemos segui o segunte passo a passo no terminal
-```
-sudo mn --topo single,4 #Para fazer uma topologia de 4 hosts e 1 switch:
-
-xterm s1 #para abri um terminal auxiliar
-
-#no terminal auxiliar
-wireshark & #para abrir o programa
-```
-no wireshark  
-![alt text](image.png)  
-no menu superior consiguira gravar e salva os dados para o experimento(salvar como .PCAP).
-![alt text](image-1.png)  
-no terminal principal
-```
-h1 ping -c 200 h3 #para simular o trafico 
-h2 ping -c 200 h4
-```
-com isso no wireshark poderemos observar ele capturando os dados
-![alt text](image-2.png)
-
-agora com o arquivo PCAP salvo na mesma pasta do codigo desse repositório com o nome de `valido.pcap`
-ao rodar o codigo teremos uma saida parecida com essa:
-![alt text](image-3.png)  
-![alt text](image-4.png)
-
-## Analise do codigo
-```
 from scapy.all import *
 import matplotlib.pyplot as plt
 import numpy as np
@@ -106,4 +70,3 @@ def analise_pcap():
 
 if __name__ == "__main__":
     analise_pcap()
-```
